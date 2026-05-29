@@ -243,7 +243,7 @@ export default function PublicPage() {
                 <Link href="/register">
                   <Button
                     variant="outline"
-                    className="bg-transparent border border-white/30 text-white hover:bg-white/10 hover:text-white px-6 sm:px-8 py-5 sm:py-6 text-base w-full sm:w-auto"
+                    className="border-white/30 text-white hover:bg-white/10 px-6 sm:px-8 py-5 sm:py-6 text-base w-full sm:w-auto"
                   >
                     Créer un compte
                   </Button>
