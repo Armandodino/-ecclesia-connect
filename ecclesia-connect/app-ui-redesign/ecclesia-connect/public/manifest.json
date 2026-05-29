@@ -1,0 +1,48 @@
+{
+  "name": "Ecclesia Connect",
+  "short_name": "Ecclesia",
+  "description": "Plateforme catholique moderne - Écosystème numérique pour la vie de paroisse",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDF8F3",
+  "theme_color": "#1E3A5F",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["religion", "social", "education"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Annonces",
+      "short_name": "Annonces",
+      "url": "/annonces",
+      "description": "Voir les annonces paroissiales"
+    },
+    {
+      "name": "Calendrier",
+      "short_name": "Calendrier",
+      "url": "/calendrier",
+      "description": "Calendrier liturgique"
+    },
+    {
+      "name": "Messes",
+      "short_name": "Messes",
+      "url": "/messes",
+      "description": "Horaires des messes"
+    },
+    {
+      "name": "Prières",
+      "short_name": "Prières",
+      "url": "/espace-spirituel",
+      "description": "Espace spirituel"
+    }
+  ]
+}
