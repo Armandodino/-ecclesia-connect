@@ -36,7 +36,7 @@ export function Header({ onMobileMenuToggle }: HeaderProps) {
   }
 
   return (
-    <header className="sticky top-0 z-30 h-16 border-b border-border bg-card/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-30 h-16 border-b border-border bg-card/95 backdrop-blur-sm">
       <div className="flex items-center justify-between h-full px-4 lg:px-6">
         {/* Left: Mobile menu + Search */}
         <div className="flex items-center gap-4 flex-1">
@@ -54,8 +54,8 @@ export function Header({ onMobileMenuToggle }: HeaderProps) {
             <Input
               placeholder="Rechercher dans Ecclesia Connect..."
               className={cn(
-                "pl-10 bg-muted/50 border-transparent focus:border-gold/30 focus:bg-card transition-all duration-300",
-                searchFocused && "ring-2 ring-gold/20"
+                "pl-10 bg-muted border-transparent focus:border-primary/40 focus:bg-card transition-colors duration-200",
+                searchFocused && "ring-2 ring-primary/15"
               )}
               onFocus={() => setSearchFocused(true)}
               onBlur={() => setSearchFocused(false)}
@@ -96,7 +96,7 @@ export function Header({ onMobileMenuToggle }: HeaderProps) {
                   initial={{ opacity: 0, y: 10, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  className="absolute right-0 mt-2 w-80 bg-card rounded-2xl border border-border shadow-xl overflow-hidden"
+                  className="absolute right-0 mt-2 w-80 bg-popover rounded-xl border border-border shadow-lg overflow-hidden"
                 >
                   <div className="p-4 border-b border-border">
                     <h3 className="font-cathedral font-semibold">Notifications</h3>
@@ -111,12 +111,12 @@ export function Header({ onMobileMenuToggle }: HeaderProps) {
                         key={i}
                         className={cn(
                           "p-4 border-b border-border/50 hover:bg-muted/30 transition-colors cursor-pointer",
-                          notif.unread && "bg-gold/5"
+                          notif.unread && "bg-primary/5"
                         )}
                       >
                         <div className="flex items-start gap-3">
                           {notif.unread && (
-                            <div className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0" />
+                            <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
                           )}
                           <div className="flex-1 min-w-0">
                             <p className="text-sm font-medium">{notif.title}</p>
@@ -163,7 +163,7 @@ export function Header({ onMobileMenuToggle }: HeaderProps) {
                   initial={{ opacity: 0, y: 10, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  className="absolute right-0 mt-2 w-56 bg-card rounded-2xl border border-border shadow-xl overflow-hidden"
+                  className="absolute right-0 mt-2 w-56 bg-popover rounded-xl border border-border shadow-lg overflow-hidden"
                 >
                   <div className="p-4 border-b border-border">
                     <p className="font-medium">Fr. Jean Kouassi</p>

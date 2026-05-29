@@ -144,12 +144,12 @@ export function Dashboard() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="relative overflow-hidden rounded-2xl sm:rounded-3xl stained-glass p-4 sm:p-6 lg:p-8 text-white"
+        className="relative overflow-hidden rounded-2xl stained-glass p-6 sm:p-8 lg:p-10 text-white"
       >
-        <div className="relative z-10">
-          <div className="flex items-center gap-2 mb-2">
-            <Sun className="w-4 h-4 sm:w-5 sm:h-5 text-gold" />
-            <span className="text-xs sm:text-sm font-medium text-white/80">
+        <div className="relative z-10 max-w-2xl">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/85 ring-1 ring-white/15">
+              <Sun className="w-3.5 h-3.5 text-gold-light" />
               {today.toLocaleDateString("fr-FR", {
                 weekday: "long",
                 day: "numeric",
@@ -158,19 +158,16 @@ export function Dashboard() {
               })}
             </span>
           </div>
-          <h1 className="font-cathedral text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">
+          <h1 className="font-cathedral text-3xl sm:text-4xl font-semibold tracking-tight mb-2 text-balance">
             {greeting}, Fr. Amadou
           </h1>
-          <p className="text-white/80 text-sm sm:text-base lg:text-lg">
+          <p className="text-white/75 text-base lg:text-lg text-pretty">
             Que la paix du Christ soit avec vous aujourd&apos;hui.
           </p>
         </div>
-        <div className="absolute top-4 right-4 opacity-10">
-          <Cross className="w-32 h-32" />
+        <div className="pointer-events-none absolute -top-6 right-6 opacity-[0.07]">
+          <Cross className="w-40 h-40" />
         </div>
-        {/* Decorative circles */}
-        <div className="absolute -bottom-8 -right-8 w-32 h-32 rounded-full bg-white/5" />
-        <div className="absolute -top-4 -right-16 w-24 h-24 rounded-full bg-white/5" />
       </motion.div>
 
       {/* Stats Grid */}
@@ -182,24 +179,24 @@ export function Dashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <Card className="glass hover:shadow-lg transition-all duration-300 group">
-              <CardContent className="p-3 sm:p-5">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <p className="text-xs sm:text-sm text-muted-foreground font-medium">
+            <Card className="hover:shadow-md transition-shadow duration-200">
+              <CardContent className="p-4 sm:p-5">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <p className="text-xs sm:text-sm text-muted-foreground font-medium truncate">
                       {stat.label}
                     </p>
-                    <p className="text-lg sm:text-2xl font-bold mt-1 font-cathedral">
+                    <p className="text-xl sm:text-2xl font-semibold mt-1.5 font-cathedral tracking-tight text-foreground">
                       {stat.value}
                     </p>
-                    <div className="flex items-center gap-1 mt-2">
-                      <TrendingUp className="w-3 h-3 text-emerald" />
-                      <span className="text-xs font-medium text-emerald">
+                    <div className="flex items-center gap-1 mt-2.5">
+                      <TrendingUp className="w-3.5 h-3.5 text-success" />
+                      <span className="text-xs font-medium text-success">
                         {stat.change}
                       </span>
                     </div>
                   </div>
-                  <div className={`p-3 rounded-xl ${stat.bgColor} transition-transform group-hover:scale-110`}>
+                  <div className={`shrink-0 p-2.5 rounded-lg ${stat.bgColor}`}>
                     <stat.icon className={`w-5 h-5 ${stat.color}`} />
                   </div>
                 </div>

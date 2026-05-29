@@ -78,13 +78,13 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
       initial={false}
       animate={{ width: collapsed ? 72 : 280 }}
       transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-      className="fixed left-0 top-0 z-40 h-screen border-r border-border bg-card/80 backdrop-blur-xl flex flex-col"
+      className="fixed left-0 top-0 z-40 h-screen border-r border-border bg-card flex flex-col"
     >
       {/* Logo */}
       <div className="flex items-center h-16 px-4 border-b border-border">
         <Link href="/" className="flex items-center gap-3 overflow-hidden">
-          <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-royal-blue flex items-center justify-center cathedral-glow">
-            <Cross className="w-5 h-5 text-gold" />
+          <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
+            <Cross className="w-5 h-5 text-gold-light" />
           </div>
           <AnimatePresence>
             {!collapsed && (
@@ -138,18 +138,18 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
                         key={item.href}
                         href={item.href}
                         className={cn(
-                          "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200 group",
+                          "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors duration-150 group",
                           isActive
-                            ? "bg-royal-blue text-white shadow-md"
-                            : "text-muted-foreground hover:bg-accent/10 hover:text-foreground"
+                            ? "bg-primary text-primary-foreground"
+                            : "text-muted-foreground hover:bg-muted hover:text-foreground"
                         )}
                       >
                         <item.icon
                           className={cn(
                             "w-5 h-5 flex-shrink-0 transition-colors",
                             isActive
-                              ? "text-gold"
-                              : "text-muted-foreground group-hover:text-gold"
+                              ? "text-gold-light"
+                              : "text-muted-foreground group-hover:text-foreground"
                           )}
                         />
                         <AnimatePresence>

@@ -1,72 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Cathedral-inspired palette */
-  --royal-blue: #1E3A5F;
-  --royal-blue-light: #2A5082;
-  --royal-blue-dark: #142840;
-  --off-white: #F5F0EB;
-  --cream: #FDF8F3;
-  --gold: #D4AF37;
-  --gold-light: #E8C84A;
-  --gold-dark: #B8962E;
-  --stone-gray: #8B8680;
-  --stone-light: #C4BFBA;
-  --stone-dark: #5C5854;
-  --deep-purple: #5B2C8E;
-  --wine-red: #6B2D5B;
-  --emerald: #1B5E20;
+  /* ── Brand palette ─────────────────────────────
+     Deep liturgical blue + restrained antique brass,
+     on warm paper neutrals. Used sparingly & intentionally. */
+  --royal-blue: #1F3A5F;
+  --royal-blue-light: #2C5180;
+  --royal-blue-dark: #15293F;
+  --gold: #B0892F;
+  --gold-light: #C8A24A;
+  --gold-dark: #8C6C24;
 
-  /* Semantic tokens */
-  --background: var(--cream);
-  --foreground: var(--royal-blue-dark);
-  --card: rgba(255, 255, 255, 0.7);
-  --card-foreground: var(--royal-blue-dark);
+  /* Neutrals (warm paper) */
+  --paper: #FAF8F4;
+  --paper-deep: #F2EDE4;
+  --ink: #1B2330;
+  --ink-soft: #5B6373;
+
+  /* ── Semantic tokens ── */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: #FFFFFF;
+  --card-foreground: var(--ink);
+  --popover: #FFFFFF;
+  --popover-foreground: var(--ink);
   --primary: var(--royal-blue);
   --primary-foreground: #FFFFFF;
-  --secondary: var(--gold);
+  --secondary: #EFEAE1;
   --secondary-foreground: var(--royal-blue-dark);
-  --muted: var(--stone-light);
-  --muted-foreground: var(--stone-gray);
+  --muted: #F1ECE3;
+  --muted-foreground: var(--ink-soft);
   --accent: var(--gold);
-  --accent-foreground: var(--royal-blue-dark);
-  --destructive: #C62828;
+  --accent-foreground: #FFFFFF;
+  --destructive: #B23B3B;
   --destructive-foreground: #FFFFFF;
-  --border: rgba(139, 134, 128, 0.2);
-  --input: rgba(139, 134, 128, 0.2);
+  --success: #2F6B46;
+  --border: #E6DFD3;
+  --input: #E6DFD3;
   --ring: var(--royal-blue);
-  --radius: 0.75rem;
+  --radius: 0.625rem;
 
-  /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.3);
-  --glass-shadow: 0 8px 32px rgba(30, 58, 95, 0.1);
+  /* Legacy accent aliases kept so existing pages stay coherent */
+  --off-white: #F5F0EB;
+  --cream: var(--paper);
+  --stone-gray: var(--ink-soft);
+  --stone-light: #CFC8BC;
+  --stone-dark: #5C5854;
+  --deep-purple: #4B3A6B;
+  --wine-red: #7A3550;
+  --emerald: var(--success);
 
-  /* Cathedral shadows */
-  --shadow-sm: 0 1px 3px rgba(30, 58, 95, 0.08);
-  --shadow-md: 0 4px 16px rgba(30, 58, 95, 0.1);
-  --shadow-lg: 0 8px 32px rgba(30, 58, 95, 0.12);
-  --shadow-xl: 0 16px 48px rgba(30, 58, 95, 0.15);
+  /* Refined, soft shadows */
+  --shadow-sm: 0 1px 2px rgba(27, 35, 48, 0.05);
+  --shadow-md: 0 2px 8px rgba(27, 35, 48, 0.06);
+  --shadow-lg: 0 8px 24px rgba(27, 35, 48, 0.08);
+  --shadow-xl: 0 16px 40px rgba(27, 35, 48, 0.10);
+
+  --glass-bg: var(--card);
+  --glass-border: var(--border);
+  --glass-shadow: var(--shadow-md);
 }
 
 .dark {
-  --background: #0F1419;
-  --foreground: #F5F0EB;
-  --card: rgba(30, 42, 56, 0.8);
-  --card-foreground: #F5F0EB;
-  --primary: var(--royal-blue-light);
+  --background: #11151C;
+  --foreground: #ECE7DE;
+  --card: #181D26;
+  --card-foreground: #ECE7DE;
+  --popover: #181D26;
+  --popover-foreground: #ECE7DE;
+  --primary: #3E6CA6;
   --primary-foreground: #FFFFFF;
-  --secondary: var(--gold);
-  --secondary-foreground: #F5F0EB;
-  --muted: rgba(139, 134, 128, 0.3);
-  --muted-foreground: #A09A94;
-  --border: rgba(212, 175, 55, 0.15);
-  --glass-bg: rgba(30, 42, 56, 0.6);
-  --glass-border: rgba(212, 175, 55, 0.1);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --secondary: #232A35;
+  --secondary-foreground: #ECE7DE;
+  --muted: #1E242E;
+  --muted-foreground: #9AA1AE;
+  --accent: #C8A24A;
+  --accent-foreground: #15293F;
+  --destructive: #C75252;
+  --destructive-foreground: #FFFFFF;
+  --success: #4E9A6E;
+  --border: #2A313C;
+  --input: #2A313C;
+  --ring: #3E6CA6;
+
+  --gold: #C8A24A;
+  --gold-light: #D9B868;
+  --gold-dark: #A9853A;
+  --stone-light: #3A414C;
+  --deep-purple: #8C77B5;
+  --wine-red: #BC7C97;
+  --emerald: #4E9A6E;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-xl: 0 16px 40px rgba(0, 0, 0, 0.5);
+
+  --glass-bg: var(--card);
+  --glass-border: var(--border);
+  --glass-shadow: var(--shadow-md);
 }
 
 @theme inline {
@@ -74,6 +109,8 @@
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
@@ -84,17 +121,24 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-royal-blue: var(--royal-blue);
+  --color-royal-blue-light: var(--royal-blue-light);
+  --color-royal-blue-dark: var(--royal-blue-dark);
   --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
   --color-cream: var(--cream);
   --color-off-white: var(--off-white);
   --color-stone-gray: var(--stone-gray);
   --color-deep-purple: var(--deep-purple);
   --color-wine-red: var(--wine-red);
   --color-emerald: var(--emerald);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -107,162 +151,130 @@ body {
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.005em;
 }
 
+/* Display / heading serif — refined, editorial, used for titles */
 .font-cathedral {
-  font-family: 'Cinzel', serif;
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
+/* Elegant serif for scripture & quotes */
 .font-serif-elegant {
-  font-family: 'Crimson Pro', serif;
+  font-family: 'Fraunces', Georgia, serif;
+  font-optical-sizing: auto;
 }
 
-/* Glassmorphism */
+/* ── Surfaces ──────────────────────────────────
+   "glass" now resolves to a clean, solid, well-shadowed
+   surface so the whole app loses the noisy frosted look. */
 .glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
 }
 
 .glass-strong {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: var(--shadow-lg);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
 }
 
-/* Cathedral decorative elements */
-.cathedral-border {
-  border-image: linear-gradient(
-    135deg,
-    var(--gold) 0%,
-    var(--gold-light) 50%,
-    var(--gold) 100%
-  ) 1;
-}
-
-.cathedral-glow {
-  box-shadow:
-    0 0 20px rgba(212, 175, 55, 0.15),
-    0 0 40px rgba(212, 175, 55, 0.05);
-}
-
-/* Stained glass gradient */
+/* Subtle, single-temperature blue panel for heroes/feature headers */
 .stained-glass {
-  background: linear-gradient(
-    135deg,
-    rgba(30, 58, 95, 0.9) 0%,
-    rgba(91, 44, 142, 0.8) 25%,
-    rgba(107, 45, 91, 0.8) 50%,
-    rgba(212, 175, 55, 0.7) 75%,
-    rgba(30, 58, 95, 0.9) 100%
-  );
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(176, 137, 47, 0.18) 0%, transparent 45%),
+    linear-gradient(135deg, var(--royal-blue) 0%, var(--royal-blue-dark) 100%);
 }
 
-/* Divine light animation */
-@keyframes divine-light {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.6; }
+/* Removed glow — kept as no-op so existing class usage stays safe */
+.cathedral-glow {
+  box-shadow: var(--shadow-sm);
 }
 
-.animate-divine-light {
-  animation: divine-light 4s ease-in-out infinite;
+.cathedral-border {
+  border-color: var(--border);
 }
 
-/* Cross pattern background */
+/* Background pattern toned right down to a whisper */
 .cross-pattern {
-  background-image: radial-gradient(
-    circle at center,
-    rgba(212, 175, 55, 0.08) 1px,
-    transparent 1px
-  );
-  background-size: 24px 24px;
+  background-image: none;
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
-
 ::-webkit-scrollbar-track {
   background: transparent;
 }
-
 ::-webkit-scrollbar-thumb {
   background: var(--stone-light);
-  border-radius: 4px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--stone-gray);
+  background: var(--ink-soft);
+  background-clip: padding-box;
 }
 
-/* Selection styling */
 ::selection {
-  background: rgba(212, 175, 55, 0.3);
+  background: rgba(31, 58, 95, 0.14);
   color: var(--royal-blue-dark);
 }
 
-/* Focus visible */
 *:focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 2px solid var(--ring);
   outline-offset: 2px;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Page transitions */
+/* ── Motion ── */
 @keyframes fade-in {
-  from { opacity: 0; transform: translateY(8px); }
+  from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 .animate-fade-in {
-  animation: fade-in 0.4s ease-out forwards;
+  animation: fade-in 0.35s ease-out forwards;
 }
 
 @keyframes slide-up {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 .animate-slide-up {
-  animation: slide-up 0.5s ease-out forwards;
+  animation: slide-up 0.45s ease-out forwards;
+}
+
+@keyframes divine-light {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.55; }
+}
+.animate-divine-light {
+  animation: divine-light 5s ease-in-out infinite;
 }
 
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
 }
-
 .animate-shimmer {
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(212, 175, 55, 0.1) 50%,
-    transparent 100%
-  );
+  background: linear-gradient(90deg, transparent 0%, rgba(176, 137, 47, 0.08) 50%, transparent 100%);
   background-size: 200% 100%;
   animation: shimmer 3s ease-in-out infinite;
 }
 
-/* Safe area for mobile devices (notch) */
-.safe-area-bottom {
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-}
+/* Safe areas / mobile */
+.safe-area-bottom { padding-bottom: env(safe-area-inset-bottom, 0px); }
+.safe-area-top { padding-top: env(safe-area-inset-top, 0px); }
 
-.safe-area-top {
-  padding-top: env(safe-area-inset-top, 0px);
-}
-
-/* Mobile touch improvements */
 @media (max-width: 1024px) {
   button, a, [role="button"] {
     min-height: 44px;
@@ -270,159 +282,92 @@ html {
   }
 }
 
-/* Better scrolling on mobile */
 @supports (-webkit-touch-callout: none) {
-  .h-screen {
-    height: -webkit-fill-available;
-  }
+  .h-screen { height: -webkit-fill-available; }
 }
 
 /* Responsive text utilities */
-.text-responsive-xs {
-  font-size: clamp(0.625rem, 1.5vw, 0.75rem);
-}
+.text-responsive-xs { font-size: clamp(0.625rem, 1.5vw, 0.75rem); }
+.text-responsive-sm { font-size: clamp(0.75rem, 2vw, 0.875rem); }
+.text-responsive-base { font-size: clamp(0.875rem, 2.5vw, 1rem); }
+.text-responsive-lg { font-size: clamp(1rem, 3vw, 1.125rem); }
+.text-responsive-xl { font-size: clamp(1.25rem, 4vw, 1.5rem); }
+.text-responsive-2xl { font-size: clamp(1.5rem, 5vw, 2rem); }
+.text-responsive-3xl { font-size: clamp(1.875rem, 6vw, 2.25rem); }
 
-.text-responsive-sm {
-  font-size: clamp(0.75rem, 2vw, 0.875rem);
-}
-
-.text-responsive-base {
-  font-size: clamp(0.875rem, 2.5vw, 1rem);
-}
-
-.text-responsive-lg {
-  font-size: clamp(1rem, 3vw, 1.125rem);
-}
-
-.text-responsive-xl {
-  font-size: clamp(1.25rem, 4vw, 1.5rem);
-}
-
-.text-responsive-2xl {
-  font-size: clamp(1.5rem, 5vw, 2rem);
-}
-
-.text-responsive-3xl {
-  font-size: clamp(1.875rem, 6vw, 2.25rem);
-}
-
-/* Hide scrollbar on mobile for cleaner look */
 @media (max-width: 1024px) {
   .hide-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
 }
 
 /* ============================================
    PARCHMENT ANNOUNCEMENT SYSTEM
-   Medieval illuminated manuscript design
+   Kept as a deliberate, refined feature for the
+   printable "affichage paroissial" announcements.
    ============================================ */
-
-/* Parchment base - aged vellum texture */
 .parchment {
   position: relative;
   background:
-    /* Subtle noise/grain texture */
-    radial-gradient(ellipse at 20% 50%, rgba(139, 134, 128, 0.04) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
-    radial-gradient(ellipse at 40% 80%, rgba(139, 134, 128, 0.03) 0%, transparent 50%),
-    /* Aged paper gradient */
-    linear-gradient(
-      180deg,
-      #FDF8F3 0%,
-      #F8F0E3 15%,
-      #F5ECD7 30%,
-      #F2E8CF 50%,
-      #F5ECD7 70%,
-      #F8F0E3 85%,
-      #FDF8F3 100%
-    );
-  border: 1px solid rgba(184, 150, 46, 0.2);
-  border-radius: 4px;
+    radial-gradient(ellipse at 20% 50%, rgba(139, 134, 128, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(176, 137, 47, 0.025) 0%, transparent 50%),
+    linear-gradient(180deg, #FDFBF6 0%, #F7F1E6 30%, #F4EEE1 50%, #F7F1E6 70%, #FDFBF6 100%);
+  border: 1px solid rgba(176, 137, 47, 0.22);
+  border-radius: 6px;
   overflow: hidden;
 }
 
-/* Parchment edge burn/aging effect */
 .parchment::before {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    /* Top edge aging */
-    linear-gradient(180deg, rgba(139, 134, 128, 0.08) 0%, transparent 8%),
-    /* Bottom edge aging */
-    linear-gradient(0deg, rgba(139, 134, 128, 0.08) 0%, transparent 8%),
-    /* Left edge aging */
-    linear-gradient(90deg, rgba(139, 134, 128, 0.06) 0%, transparent 6%),
-    /* Right edge aging */
-    linear-gradient(270deg, rgba(139, 134, 128, 0.06) 0%, transparent 6%);
+    linear-gradient(180deg, rgba(139, 134, 128, 0.06) 0%, transparent 8%),
+    linear-gradient(0deg, rgba(139, 134, 128, 0.06) 0%, transparent 8%),
+    linear-gradient(90deg, rgba(139, 134, 128, 0.05) 0%, transparent 6%),
+    linear-gradient(270deg, rgba(139, 134, 128, 0.05) 0%, transparent 6%);
   pointer-events: none;
   z-index: 1;
 }
 
-/* Parchment inner shadow for depth */
 .parchment::after {
   content: '';
   position: absolute;
   inset: 0;
   box-shadow:
-    inset 0 0 30px rgba(139, 134, 128, 0.08),
-    inset 0 0 60px rgba(139, 134, 128, 0.04);
+    inset 0 0 30px rgba(139, 134, 128, 0.06),
+    inset 0 0 60px rgba(139, 134, 128, 0.03);
   pointer-events: none;
   z-index: 1;
 }
 
-/* Decorative corner flourishes */
-.parchment-corners {
-  position: relative;
-}
-
+.parchment-corners { position: relative; }
 .parchment-corners::before,
 .parchment-corners::after {
   content: '❧';
   position: absolute;
-  font-size: 1.5rem;
-  color: rgba(184, 150, 46, 0.35);
+  font-size: 1.4rem;
+  color: rgba(140, 108, 36, 0.32);
   z-index: 2;
   line-height: 1;
 }
+.parchment-corners::before { top: 8px; left: 12px; }
+.parchment-corners::after { bottom: 8px; right: 12px; transform: rotate(180deg); }
 
-.parchment-corners::before {
-  top: 8px;
-  left: 12px;
-}
-
-.parchment-corners::after {
-  bottom: 8px;
-  right: 12px;
-  transform: rotate(180deg);
-}
-
-/* Illuminated drop cap */
 .drop-cap::first-letter {
   float: left;
-  font-family: 'Cinzel', serif;
-  font-size: 3.5em;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 3.4em;
   line-height: 0.8;
   padding-right: 0.12em;
   padding-top: 0.05em;
-  color: #D4AF37;
+  color: var(--gold-dark);
   font-weight: 700;
-  text-shadow:
-    1px 1px 0 rgba(30, 58, 95, 0.15),
-    2px 2px 4px rgba(30, 58, 95, 0.08);
 }
 
-/* Gothic arch frame */
-.gothic-arch {
-  position: relative;
-  padding-top: 2rem;
-}
-
+.gothic-arch { position: relative; padding-top: 2rem; }
 .gothic-arch::before {
   content: '';
   position: absolute;
@@ -432,12 +377,11 @@ html {
   width: 60px;
   height: 24px;
   background:
-    radial-gradient(circle at 50% 100%, transparent 18px, rgba(184, 150, 46, 0.25) 18px, rgba(184, 150, 46, 0.25) 20px, transparent 20px),
-    radial-gradient(circle at 30% 100%, transparent 10px, rgba(184, 150, 46, 0.15) 10px, rgba(184, 150, 46, 0.15) 12px, transparent 12px),
-    radial-gradient(circle at 70% 100%, transparent 10px, rgba(184, 150, 46, 0.15) 10px, rgba(184, 150, 46, 0.15) 12px, transparent 12px);
+    radial-gradient(circle at 50% 100%, transparent 18px, rgba(140, 108, 36, 0.22) 18px, rgba(140, 108, 36, 0.22) 20px, transparent 20px),
+    radial-gradient(circle at 30% 100%, transparent 10px, rgba(140, 108, 36, 0.14) 10px, rgba(140, 108, 36, 0.14) 12px, transparent 12px),
+    radial-gradient(circle at 70% 100%, transparent 10px, rgba(140, 108, 36, 0.14) 10px, rgba(140, 108, 36, 0.14) 12px, transparent 12px);
 }
 
-/* Wax seal badge */
 .wax-seal {
   position: relative;
   display: inline-flex;
@@ -448,21 +392,16 @@ html {
   border-radius: 50%;
   background:
     radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 65% 65%, rgba(0, 0, 0, 0.1) 0%, transparent 50%),
-    linear-gradient(135deg, #C62828 0%, #8B1A1A 50%, #5C1010 100%);
-  box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.3),
-    inset 0 1px 2px rgba(255, 255, 255, 0.2),
-    inset 0 -1px 2px rgba(0, 0, 0, 0.2);
+    linear-gradient(135deg, #9E2B2B 0%, #7A1E1E 50%, #561212 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.2);
   color: #FDF8F3;
-  font-family: 'Cinzel', serif;
+  font-family: 'Fraunces', serif;
   font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   z-index: 3;
 }
-
 .wax-seal::after {
   content: '';
   position: absolute;
@@ -471,35 +410,25 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Decorative horizontal rule */
 .ornamental-rule {
   position: relative;
   border: none;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(184, 150, 46, 0.1) 15%,
-    rgba(184, 150, 46, 0.4) 50%,
-    rgba(184, 150, 46, 0.1) 85%,
-    transparent 100%
-  );
+  background: linear-gradient(90deg, transparent 0%, rgba(140, 108, 36, 0.1) 15%, rgba(140, 108, 36, 0.4) 50%, rgba(140, 108, 36, 0.1) 85%, transparent 100%);
   margin: 1.5rem 0;
 }
-
 .ornamental-rule::before {
   content: '✦';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #F5ECD7;
+  background: #F4EEE1;
   padding: 0 0.75rem;
-  color: rgba(184, 150, 46, 0.5);
+  color: rgba(140, 108, 36, 0.5);
   font-size: 0.75rem;
 }
 
-/* Manuscript justified text */
 .manuscript-text {
   text-align: justify;
   hyphens: auto;
@@ -508,58 +437,35 @@ html {
   letter-spacing: 0.01em;
 }
 
-/* Liturgical header decoration */
-.liturgical-header {
-  position: relative;
-  text-align: center;
-  padding: 0.5rem 0;
-}
-
+.liturgical-header { position: relative; text-align: center; padding: 0.5rem 0; }
 .liturgical-header::before,
 .liturgical-header::after {
   content: '—';
-  color: rgba(184, 150, 46, 0.4);
+  color: rgba(140, 108, 36, 0.4);
   margin: 0 0.5rem;
 }
 
-/* Cross decorative element */
-.cross-decoration {
-  position: relative;
-  display: inline-block;
-}
-
+.cross-decoration { position: relative; display: inline-block; }
 .cross-decoration::before {
   content: '✟';
   position: absolute;
   top: -0.2em;
   left: -1.2em;
   font-size: 0.8em;
-  color: rgba(184, 150, 46, 0.4);
+  color: rgba(140, 108, 36, 0.4);
 }
 
-/* Print-specific parchment styles */
 @media print {
-  /* Hide everything except parchment content */
-  body * {
-    visibility: hidden !important;
-  }
-
+  body * { visibility: hidden !important; }
   .parchment-print-area,
-  .parchment-print-area * {
-    visibility: visible !important;
-  }
-
-  /* Reset body for print */
+  .parchment-print-area * { visibility: visible !important; }
   body {
     background: white !important;
     margin: 0 !important;
     padding: 0 !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    color-adjust: exact !important;
   }
-
-  /* Position parchment for print */
   .parchment-print-area {
     position: absolute;
     left: 0;
@@ -567,97 +473,44 @@ html {
     width: 100%;
     padding: 15mm 20mm;
   }
-
-  /* Parchment print styling */
   .parchment-print-area .parchment {
-    border: 2px solid #B8962E !important;
+    border: 2px solid var(--gold-dark) !important;
     box-shadow: none !important;
-    background:
-      radial-gradient(ellipse at 20% 50%, rgba(139, 134, 128, 0.04) 0%, transparent 50%),
-      linear-gradient(
-        180deg,
-        #FDF8F3 0%,
-        #F8F0E3 15%,
-        #F5ECD7 30%,
-        #F2E8CF 50%,
-        #F5ECD7 70%,
-        #F8F0E3 85%,
-        #FDF8F3 100%
-      ) !important;
     page-break-inside: avoid;
   }
-
-  /* Hide interactive elements in print */
-  .parchment-print-area .no-print {
-    display: none !important;
-  }
-
-  /* Show print-only footer */
-  .print-only {
-    display: block !important;
-  }
-
-  /* Force colors for print */
-  .parchment-print-area .wax-seal {
-    background:
-      radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
-      linear-gradient(135deg, #C62828 0%, #8B1A1A 50%, #5C1010 100%) !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-
-  /* Page setup */
-  @page {
-    size: A4;
-    margin: 15mm;
-  }
+  .parchment-print-area .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  @page { size: A4; margin: 15mm; }
 }
 
-/* Print-only elements (hidden on screen) */
-.print-only {
-  display: none;
-}
+.print-only { display: none; }
 
-/* Parchment announcement card hover effect */
 .parchment-card {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .parchment-card:hover {
   transform: translateY(-2px);
-  box-shadow:
-    0 8px 32px rgba(30, 58, 95, 0.12),
-    0 0 0 1px rgba(184, 150, 46, 0.15);
+  box-shadow: var(--shadow-lg);
 }
 
-/* Fleur-de-lis decorative separator */
 .fleur-separator {
   text-align: center;
   margin: 1rem 0;
-  color: rgba(184, 150, 46, 0.3);
+  color: rgba(140, 108, 36, 0.3);
   font-size: 1rem;
   letter-spacing: 0.5em;
 }
 
-/* Illuminated border for special announcements */
-.illuminated-border {
-  position: relative;
-  border: 1px solid rgba(184, 150, 46, 0.2);
-}
-
+.illuminated-border { position: relative; border: 1px solid rgba(140, 108, 36, 0.2); }
 .illuminated-border::before {
   content: '';
   position: absolute;
   inset: 4px;
-  border: 1px solid rgba(184, 150, 46, 0.1);
+  border: 1px solid rgba(140, 108, 36, 0.1);
   pointer-events: none;
 }
 
-/* Scroll indicator for parchment */
-.parchment-scroll {
-  position: relative;
-}
-
+.parchment-scroll { position: relative; }
 .parchment-scroll::after {
   content: '';
   position: absolute;
@@ -665,26 +518,16 @@ html {
   left: 0;
   right: 0;
   height: 40px;
-  background: linear-gradient(transparent, rgba(245, 236, 215, 0.9));
+  background: linear-gradient(transparent, rgba(244, 238, 225, 0.9));
   pointer-events: none;
 }
 
-/* Medieval-style list */
-.manuscript-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.manuscript-list li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
+.manuscript-list { list-style: none; padding-left: 0; }
+.manuscript-list li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
 .manuscript-list li::before {
   content: '✦';
   position: absolute;
   left: 0;
-  color: rgba(184, 150, 46, 0.5);
+  color: rgba(140, 108, 36, 0.5);
   font-size: 0.7em;
 }
