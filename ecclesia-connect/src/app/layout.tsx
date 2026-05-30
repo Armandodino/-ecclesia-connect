@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import { Fraunces, Inter, Cormorant_Garamond } from "next/font/google"
+import { Providers } from "@/components/providers"
 import "./globals.css"
 
 const fraunces = Fraunces({
@@ -52,7 +53,7 @@ export default function RootLayout({
       className={`${fraunces.variable} ${inter.variable} ${cormorant.variable} bg-background`}
     >
       <body className="min-h-screen bg-background font-sans antialiased">
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   )
