@@ -3,20 +3,20 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* ===== Brand palette — harmonious cathedral ===== */
-  --royal-blue: #1e3f6b;        /* warm deep blue (primary) */
+  /* ===== Brand palette — clean & modern ===== */
+  --royal-blue: #1e3f6b;
   --royal-blue-light: #2a5590;
   --royal-blue-dark: #142c4e;
-  --brass: #b8923a;             /* warm gold accent */
+  --brass: #b8923a;
   --brass-light: #d4ad52;
   --brass-dark: #967620;
-  --parchment: #f5f0e8;         /* warm cream background */
-  --parchment-deep: #ece5d8;
-  --ivory: #fdfbf8;             /* clean card surface */
-  --ink: #1e2128;               /* soft black text */
-  --ink-soft: #5a5d64;
-  --stone: #8c8f96;
-  --line: #e8e2d6;              /* warm borders */
+  --parchment: #eef1f6;
+  --parchment-deep: #e2e7ef;
+  --ivory: #ffffff;
+  --ink: #1a1d24;
+  --ink-soft: #555962;
+  --stone: #8a8e97;
+  --line: #dce1e8;
 
   /* ===== Semantic tokens ===== */
   --background: var(--parchment);
@@ -26,26 +26,26 @@
   --popover: var(--ivory);
   --popover-foreground: var(--ink);
   --primary: var(--royal-blue);
-  --primary-foreground: #fdfbf8;
-  --secondary: #f0ead9;
+  --primary-foreground: #ffffff;
+  --secondary: #e8ecf2;
   --secondary-foreground: var(--ink);
-  --muted: #f0ead9;
+  --muted: #e8ecf2;
   --muted-foreground: var(--ink-soft);
   --accent: var(--brass);
-  --accent-foreground: #fdfbf8;
+  --accent-foreground: #ffffff;
   --destructive: #b83329;
-  --destructive-foreground: #fdfbf8;
+  --destructive-foreground: #ffffff;
   --success: #3a7a48;
   --warning: #b8923a;
   --border: var(--line);
   --input: var(--line);
   --ring: var(--royal-blue);
-  --radius: 0.625rem;
+  --radius: 1rem;
 
-  /* Warm shadows */
-  --shadow-sm: 0 1px 3px rgba(30, 33, 40, 0.06);
-  --shadow-md: 0 2px 8px rgba(30, 33, 40, 0.07), 0 1px 2px rgba(30, 33, 40, 0.04);
-  --shadow-lg: 0 8px 24px rgba(30, 33, 40, 0.09), 0 2px 6px rgba(30, 33, 40, 0.04);
+  /* Glass shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 .dark {
@@ -56,26 +56,26 @@
   --brass-light: #e2c16a;
   --brass-dark: #b8923a;
 
-  --background: #0f1218;
-  --foreground: #e8e3d9;
-  --card: #161b23;
-  --card-foreground: #e8e3d9;
-  --popover: #161b23;
-  --popover-foreground: #e8e3d9;
+  --background: #0d1117;
+  --foreground: #e1e5eb;
+  --card: rgba(255, 255, 255, 0.06);
+  --card-foreground: #e1e5eb;
+  --popover: rgba(255, 255, 255, 0.08);
+  --popover-foreground: #e1e5eb;
   --primary: #5a8ec0;
   --primary-foreground: #0e1a2a;
-  --secondary: #1e242e;
-  --secondary-foreground: #e8e3d9;
-  --muted: #1a2029;
+  --secondary: rgba(255, 255, 255, 0.06);
+  --secondary-foreground: #e1e5eb;
+  --muted: rgba(255, 255, 255, 0.06);
   --muted-foreground: #8a9099;
   --accent: #d4ad52;
-  --accent-foreground: #0f1218;
+  --accent-foreground: #0d1117;
   --destructive: #e06860;
-  --destructive-foreground: #0f1218;
+  --destructive-foreground: #0d1117;
   --success: #5cb870;
   --warning: #d4ad52;
-  --border: #252b36;
-  --input: #252b36;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.08);
   --ring: #5a8ec0;
 }
 
@@ -147,17 +147,33 @@ body {
   letter-spacing: -0.01em;
 }
 
-/* Legacy class kept for compatibility — now a clean solid surface */
+/* Glassmorphism — frosted glass effect */
 .glass {
-  background: var(--card);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 .glass-strong {
-  background: var(--card);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-md);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.dark .glass {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.dark .glass-strong {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 /* Refined hero panel — single-temperature deep blue */
@@ -176,8 +192,8 @@ body {
 }
 
 .cross-pattern {
-  background-image: radial-gradient(rgba(32, 36, 43, 0.045) 1px, transparent 1px);
-  background-size: 22px 22px;
+  background-image: radial-gradient(rgba(30, 63, 107, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 /* ===== Scrollbar ===== */
