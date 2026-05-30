@@ -293,8 +293,8 @@ export default function PublicPage() {
           </div>
         </section>
 
-        {/* Public Announcements */}
-        <section className="pb-10 sm:pb-16">
+        {/* Public Announcements - Auto-scrolling carousel */}
+        <section className="pb-10 sm:pb-16 overflow-hidden">
           <div className="flex items-center justify-between mb-6">
             <h2 className="font-cathedral text-xl sm:text-2xl font-bold">
               Dernières annonces
@@ -306,21 +306,52 @@ export default function PublicPage() {
               Tout voir <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
-          <div className="space-y-3 sm:space-y-4">
-            {publicAnnouncements.map((announcement, index) => (
-              <ParchmentCard
-                key={announcement.id}
-                title={announcement.title}
-                content={announcement.content}
-                type={announcement.type}
-                typeLabel={announcement.typeLabel}
-                author={announcement.author}
-                date={announcement.date}
-                isPinned={announcement.isPinned}
-                index={index}
-                onClick={() => setSelectedAnnouncement(announcement)}
-              />
-            ))}
+
+          {/* Scrolling container */}
+          <div className="relative">
+            {/* Fade edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+
+            <div className="overflow-hidden">
+              <motion.div
+                className="flex gap-4"
+                animate={{
+                  x: ["0%", "-50%"],
+                }}
+                transition={{
+                  x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 25,
+                    ease: "linear",
+                  },
+                }}
+                whileHover={{ animationPlayState: "paused" }}
+                style={{ width: "max-content" }}
+              >
+                {/* Duplicate items for seamless loop */}
+                {[...publicAnnouncements, ...publicAnnouncements].map((announcement, index) => (
+                  <div
+                    key={`${announcement.id}-${index}`}
+                    className="flex-shrink-0 w-[340px] sm:w-[400px] cursor-pointer"
+                    onClick={() => setSelectedAnnouncement(announcement)}
+                  >
+                    <ParchmentCard
+                      title={announcement.title}
+                      content={announcement.content}
+                      type={announcement.type}
+                      typeLabel={announcement.typeLabel}
+                      author={announcement.author}
+                      date={announcement.date}
+                      isPinned={announcement.isPinned}
+                      index={index % publicAnnouncements.length}
+                      onClick={() => setSelectedAnnouncement(announcement)}
+                    />
+                  </div>
+                ))}
+              </motion.div>
+            </div>
           </div>
         </section>
 
