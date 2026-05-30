@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { Fraunces, Inter } from "next/font/google"
+import { Fraunces, Inter, Cormorant_Garamond } from "next/font/google"
 import "./globals.css"
 
 const fraunces = Fraunces({
@@ -17,6 +17,14 @@ const inter = Inter({
   display: "swap",
 })
 
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+  display: "swap",
+})
+
 export const metadata: Metadata = {
   title: "Ecclesia Connect — Plateforme catholique moderne",
   description:
@@ -29,7 +37,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
-  themeColor: "#1B3A5B",
+  themeColor: "#1e3f6b",
 }
 
 export default function RootLayout({
@@ -41,7 +49,7 @@ export default function RootLayout({
     <html
       lang="fr"
       suppressHydrationWarning
-      className={`${fraunces.variable} ${inter.variable} bg-background`}
+      className={`${fraunces.variable} ${inter.variable} ${cormorant.variable} bg-background`}
     >
       <body className="min-h-screen bg-background font-sans antialiased">
         {children}

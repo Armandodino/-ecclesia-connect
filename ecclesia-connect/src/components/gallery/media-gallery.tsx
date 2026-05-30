@@ -131,15 +131,22 @@ export function MediaGallery({
             >
               {/* Image/Video */}
               <div className="absolute inset-0">
-                <div className="w-full h-full bg-gradient-to-br from-royal-blue/10 to-gold/10 flex items-center justify-center">
-                  {item.type === "video" ? (
-                    <Video className="w-10 h-10 text-royal-blue/30" />
-                  ) : (
-                    <ImageIcon className="w-10 h-10 text-royal-blue/30" />
-                  )}
-                </div>
-                {/* When real images are added, replace with: */}
-                {/* <img src={item.src} alt={item.title} className="w-full h-full object-cover" /> */}
+                {item.src ? (
+                  <img
+                    src={item.src}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-royal-blue/10 to-gold/10 flex items-center justify-center">
+                    {item.type === "video" ? (
+                      <Video className="w-10 h-10 text-royal-blue/30" />
+                    ) : (
+                      <ImageIcon className="w-10 h-10 text-royal-blue/30" />
+                    )}
+                  </div>
+                )}
               </div>
 
               {/* Overlay */}
@@ -265,8 +272,14 @@ export function MediaGallery({
             >
               {/* Media */}
               <div className="flex-1 flex items-center justify-center min-h-[300px]">
-                <div className="w-full aspect-video rounded-xl bg-gradient-to-br from-royal-blue/20 to-gold/10 flex items-center justify-center">
-                  {filteredItems[lightboxIndex].type === "video" ? (
+                <div className="w-full aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-royal-blue/20 to-gold/10 flex items-center justify-center">
+                  {filteredItems[lightboxIndex].src ? (
+                    <img
+                      src={filteredItems[lightboxIndex].src}
+                      alt={filteredItems[lightboxIndex].title}
+                      className="w-full h-full object-contain"
+                    />
+                  ) : filteredItems[lightboxIndex].type === "video" ? (
                     <div className="text-center">
                       <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-3">
                         <Play className="w-8 h-8 text-white fill-white" />
@@ -278,7 +291,6 @@ export function MediaGallery({
                   ) : (
                     <ImageIcon className="w-16 h-16 text-white/20" />
                   )}
-                  {/* When real images: <img src={item.src} className="w-full h-full object-contain rounded-xl" /> */}
                 </div>
               </div>
 

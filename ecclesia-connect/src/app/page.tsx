@@ -3,6 +3,7 @@
 import React, { useState } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import { CathedralBackground } from "@/components/effects/cathedral-background"
 import {
   Cross,
   Church,
@@ -118,6 +119,7 @@ export default function PublicPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      <CathedralBackground />
       {/* Public Header */}
       <header className="sticky top-0 z-50 border-b border-border bg-card/90 backdrop-blur-xl">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -221,7 +223,24 @@ export default function PublicPage() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="stained-glass py-16 sm:py-20 lg:py-28">
+        <div className="relative py-16 sm:py-20 lg:py-28">
+          {/* Background image */}
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: `url('https://images.unsplash.com/photo-1548625149-fc4a29cf7092?w=1920&q=80')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+          {/* Overlay */}
+          <div className="absolute inset-0 z-[1]" style={{
+            background: `linear-gradient(135deg, rgba(30, 63, 107, 0.92) 0%, rgba(20, 44, 78, 0.88) 50%, rgba(30, 63, 107, 0.92) 100%)`,
+          }} />
+          {/* Gold accent */}
+          <div className="absolute inset-0 z-[2]" style={{
+            background: `radial-gradient(ellipse at 80% 20%, rgba(184, 146, 58, 0.15) 0%, transparent 50%)`,
+          }} />
           <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center text-white">
             <motion.div
               initial={{ opacity: 0, y: 30 }}

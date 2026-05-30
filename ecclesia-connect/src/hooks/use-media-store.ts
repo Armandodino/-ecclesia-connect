@@ -26,7 +26,7 @@ const defaultMedia: MediaItem[] = [
   {
     id: "1",
     type: "image",
-    src: "",
+    src: "https://images.unsplash.com/photo-1548625149-fc4a29cf7092?w=800&q=80",
     title: "Messe solennelle de Pâques",
     description: "Célébration de la Résurrection du Seigneur avec la chorale paroissiale",
     category: "Célébrations",
@@ -41,7 +41,7 @@ const defaultMedia: MediaItem[] = [
   {
     id: "2",
     type: "image",
-    src: "",
+    src: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=800&q=80",
     title: "Retraite spirituelle des jeunes",
     description: "Week-end de retreat au Centre Marialis de Bingerville",
     category: "Jeunesse",
@@ -71,7 +71,7 @@ const defaultMedia: MediaItem[] = [
   {
     id: "4",
     type: "image",
-    src: "",
+    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
     title: "Baptême de la promotion 2026",
     description: "15 nouveau-nés ont reçu le sacrement de baptême",
     category: "Sacrements",
@@ -86,7 +86,7 @@ const defaultMedia: MediaItem[] = [
   {
     id: "5",
     type: "image",
-    src: "",
+    src: "https://images.unsplash.com/photo-1545296664-39db56ad95cd?w=800&q=80",
     title: "Pèlerinage à Yamasan",
     description: "Le sanctuaire marian de Yamasan accueille les pèlerins ivoiriens",
     category: "Pèlerinages",
@@ -116,7 +116,7 @@ const defaultMedia: MediaItem[] = [
   {
     id: "7",
     type: "image",
-    src: "",
+    src: "https://images.unsplash.com/photo-1438032005730-c779502df39b?w=800&q=80",
     title: "Fête patronale 2025",
     description: "La communauté réunie pour la fête de Sainte-Thérèse",
     category: "Communauté",
@@ -131,7 +131,7 @@ const defaultMedia: MediaItem[] = [
   {
     id: "8",
     type: "image",
-    src: "",
+    src: "https://images.unsplash.com/photo-1609233489049-5cc3f4d2e399?w=800&q=80",
     title: "Catéchisme des enfants",
     description: "Les enfants apprennent les fondements de la foi",
     category: "Formation",

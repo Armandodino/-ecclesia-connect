@@ -116,6 +116,7 @@
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-display: var(--font-cormorant), var(--font-fraunces), ui-serif, Georgia, serif;
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -136,7 +137,11 @@ body {
 }
 
 /* Editorial serif for display headings */
-.font-cathedral,
+.font-cathedral {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
 .font-serif-elegant {
   font-family: var(--font-serif);
   letter-spacing: -0.01em;
