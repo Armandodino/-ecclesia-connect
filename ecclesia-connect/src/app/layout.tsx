@@ -1,19 +1,19 @@
 import type { Metadata, Viewport } from "next"
-import { Instrument_Serif, DM_Sans } from "next/font/google"
+import { Fraunces, Inter } from "next/font/google"
 import "./globals.css"
 
-const instrumentSerif = Instrument_Serif({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
-  variable: "--font-instrument-serif",
+  variable: "--font-fraunces",
   display: "swap",
 })
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-dm-sans",
+  variable: "--font-inter",
   display: "swap",
 })
 
@@ -41,7 +41,7 @@ export default function RootLayout({
     <html
       lang="fr"
       suppressHydrationWarning
-      className={`${instrumentSerif.variable} ${dmSans.variable} bg-background`}
+      className={`${fraunces.variable} ${inter.variable} bg-background`}
     >
       <body className="min-h-screen bg-background font-sans antialiased">
         {children}
