@@ -3,20 +3,20 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* ===== Brand palette — refined liturgical ===== */
-  --royal-blue: #1b3a5b;        /* deep liturgical blue (primary) */
-  --royal-blue-light: #2d5380;
-  --royal-blue-dark: #122a44;
-  --brass: #a98637;             /* restrained brass/gold accent */
-  --brass-light: #c2a155;
-  --brass-dark: #876a28;
-  --parchment: #f3eee5;         /* warm page background */
-  --parchment-deep: #ece4d6;
-  --ivory: #fbf9f5;             /* card surface */
-  --ink: #20242b;               /* near-black text */
-  --ink-soft: #5c5f66;
-  --stone: #8a8d94;
-  --line: #e4ddd0;              /* warm hairline borders */
+  /* ===== Brand palette — harmonious cathedral ===== */
+  --royal-blue: #1e3f6b;        /* warm deep blue (primary) */
+  --royal-blue-light: #2a5590;
+  --royal-blue-dark: #142c4e;
+  --brass: #b8923a;             /* warm gold accent */
+  --brass-light: #d4ad52;
+  --brass-dark: #967620;
+  --parchment: #f5f0e8;         /* warm cream background */
+  --parchment-deep: #ece5d8;
+  --ivory: #fdfbf8;             /* clean card surface */
+  --ink: #1e2128;               /* soft black text */
+  --ink-soft: #5a5d64;
+  --stone: #8c8f96;
+  --line: #e8e2d6;              /* warm borders */
 
   /* ===== Semantic tokens ===== */
   --background: var(--parchment);
@@ -26,57 +26,57 @@
   --popover: var(--ivory);
   --popover-foreground: var(--ink);
   --primary: var(--royal-blue);
-  --primary-foreground: #fbf9f5;
-  --secondary: #efe9dd;
+  --primary-foreground: #fdfbf8;
+  --secondary: #f0ead9;
   --secondary-foreground: var(--ink);
-  --muted: #efe9dd;
+  --muted: #f0ead9;
   --muted-foreground: var(--ink-soft);
   --accent: var(--brass);
-  --accent-foreground: #fbf9f5;
-  --destructive: #b3261e;
-  --destructive-foreground: #fbf9f5;
-  --success: #2f6b3c;
-  --warning: #b97e1f;
+  --accent-foreground: #fdfbf8;
+  --destructive: #b83329;
+  --destructive-foreground: #fdfbf8;
+  --success: #3a7a48;
+  --warning: #b8923a;
   --border: var(--line);
   --input: var(--line);
   --ring: var(--royal-blue);
   --radius: 0.625rem;
 
-  /* Soft, neutral shadows (no blue tint) */
-  --shadow-sm: 0 1px 2px rgba(32, 36, 43, 0.05);
-  --shadow-md: 0 2px 8px rgba(32, 36, 43, 0.06), 0 1px 2px rgba(32, 36, 43, 0.04);
-  --shadow-lg: 0 8px 24px rgba(32, 36, 43, 0.08), 0 2px 6px rgba(32, 36, 43, 0.04);
+  /* Warm shadows */
+  --shadow-sm: 0 1px 3px rgba(30, 33, 40, 0.06);
+  --shadow-md: 0 2px 8px rgba(30, 33, 40, 0.07), 0 1px 2px rgba(30, 33, 40, 0.04);
+  --shadow-lg: 0 8px 24px rgba(30, 33, 40, 0.09), 0 2px 6px rgba(30, 33, 40, 0.04);
 }
 
 .dark {
-  --royal-blue: #4a7bb0;
-  --royal-blue-light: #5e8dc0;
-  --royal-blue-dark: #0f1d2e;
-  --brass: #c8a557;
-  --brass-light: #dab96e;
-  --brass-dark: #a3853f;
+  --royal-blue: #5a8ec0;
+  --royal-blue-light: #6ea0d0;
+  --royal-blue-dark: #0e1a2a;
+  --brass: #d4ad52;
+  --brass-light: #e2c16a;
+  --brass-dark: #b8923a;
 
-  --background: #11151b;
-  --foreground: #ece7dd;
-  --card: #181d25;
-  --card-foreground: #ece7dd;
-  --popover: #181d25;
-  --popover-foreground: #ece7dd;
-  --primary: #5e8dc0;
-  --primary-foreground: #0f1d2e;
-  --secondary: #232a34;
-  --secondary-foreground: #ece7dd;
-  --muted: #1f252e;
-  --muted-foreground: #9aa0a9;
-  --accent: #c8a557;
-  --accent-foreground: #11151b;
-  --destructive: #e0625a;
-  --destructive-foreground: #11151b;
-  --success: #5fae6f;
-  --warning: #d9a94a;
-  --border: #272e39;
-  --input: #272e39;
-  --ring: #5e8dc0;
+  --background: #0f1218;
+  --foreground: #e8e3d9;
+  --card: #161b23;
+  --card-foreground: #e8e3d9;
+  --popover: #161b23;
+  --popover-foreground: #e8e3d9;
+  --primary: #5a8ec0;
+  --primary-foreground: #0e1a2a;
+  --secondary: #1e242e;
+  --secondary-foreground: #e8e3d9;
+  --muted: #1a2029;
+  --muted-foreground: #8a9099;
+  --accent: #d4ad52;
+  --accent-foreground: #0f1218;
+  --destructive: #e06860;
+  --destructive-foreground: #0f1218;
+  --success: #5cb870;
+  --warning: #d4ad52;
+  --border: #252b36;
+  --input: #252b36;
+  --ring: #5a8ec0;
 }
 
 @theme inline {
