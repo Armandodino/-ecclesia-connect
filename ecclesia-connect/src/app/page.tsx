@@ -21,12 +21,16 @@ import {
   X,
   Sun,
   Cloud,
+  Camera,
+  Sparkles,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ParchmentCard } from "@/components/annonces/parchment-card"
 import { ParchmentAnnouncement } from "@/components/annonces/parchment-announcement"
+import { MediaGallery } from "@/components/gallery/media-gallery"
+import { useMediaStore } from "@/hooks/use-media-store"
 import type { ParchmentData } from "@/components/annonces/parchment-announcement"
 
 const publicAnnouncements: ParchmentData[] = [
@@ -110,6 +114,7 @@ export default function PublicPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [selectedAnnouncement, setSelectedAnnouncement] =
     useState<ParchmentData | null>(null)
+  const { media } = useMediaStore()
 
   return (
     <div className="min-h-screen bg-background">
@@ -317,6 +322,64 @@ export default function PublicPage() {
               />
             ))}
           </div>
+        </section>
+
+        {/* ============ PHOTO & VIDEO GALLERY ============ */}
+        <section id="galerie" className="pb-10 sm:pb-16 scroll-mt-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <Camera className="w-5 h-5 text-gold" />
+                  <h2 className="font-cathedral text-xl sm:text-2xl font-bold">
+                    Galerie Photos & Vidéos
+                  </h2>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Revivez les moments forts de notre communauté
+                </p>
+              </div>
+            </div>
+
+            <MediaGallery
+              items={media}
+              columns={3}
+              showFilters={true}
+            />
+
+            {/* Upload CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mt-8"
+            >
+              <Card className="glass border-dashed border-2 border-border hover:border-gold/50 transition-colors">
+                <CardContent className="p-8 text-center">
+                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
+                    <Sparkles className="w-6 h-6 text-gold" />
+                  </div>
+                  <h3 className="font-cathedral text-lg font-semibold mb-2">
+                    Partagez vos moments de foi
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4 max-w-md mx-auto">
+                    Connectez-vous pour ajouter vos photos et vidéos à la galerie paroissiale.
+                    Chaque image raconte une histoire de foi.
+                  </p>
+                  <Link href="/login">
+                    <Button className="bg-royal-blue text-white hover:bg-royal-blue-light font-semibold">
+                      Se connecter pour partager
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </motion.div>
         </section>
 
         {/* Mass Schedule + Contact */}

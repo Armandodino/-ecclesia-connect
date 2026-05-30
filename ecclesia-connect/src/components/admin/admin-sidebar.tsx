@@ -16,6 +16,7 @@ import {
   Settings,
   ArrowLeft,
   ChevronRight,
+  Camera,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -27,6 +28,7 @@ const adminNav = [
   { href: "/admin/evenements", label: "Événements", icon: Calendar },
   { href: "/admin/sacrements-admin", label: "Sacrements", icon: Cross },
   { href: "/admin/groupes", label: "Groupes", icon: UsersRound },
+  { href: "/admin/media", label: "Médias", icon: Camera },
   { href: "/admin/dons-admin", label: "Dons", icon: HandHeart },
   { href: "/admin/parametres", label: "Paramètres", icon: Settings },
 ]
