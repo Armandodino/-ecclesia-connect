@@ -198,7 +198,7 @@ export default function AnnoncesPubliquesPage() {
           {/* Announcements */}
           <div className="space-y-3 sm:space-y-4">
             {filtered.length === 0 ? (
-              <Card className="glass">
+              <Card className="">
                 <CardContent className="p-8 text-center">
                   <Cross className="w-10 h-10 text-stone-gray/30 mx-auto mb-3" />
                   <p className="font-cathedral text-lg text-stone-gray">
@@ -255,7 +255,7 @@ export default function AnnoncesPubliquesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <Card className="glass">
+            <Card className="">
               <CardContent className="p-5">
                 <div className="flex items-center gap-2 mb-4">
                   <Clock className="w-4 h-4 text-royal-blue" />

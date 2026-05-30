@@ -43,7 +43,7 @@ export default function DonsAdminPage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {stats.map((stat, index) => (
             <motion.div key={stat.label} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }}>
-              <Card className="glass">
+              <Card className="">
                 <CardContent className="p-4">
                   <div className="flex items-center justify-between">
                     <div>
@@ -64,7 +64,7 @@ export default function DonsAdminPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Campaigns */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-            <Card className="glass">
+            <Card className="">
               <CardHeader className="pb-3">
                 <CardTitle className="text-base flex items-center gap-2">
                   <Target className="w-4 h-4 text-gold" />
@@ -93,7 +93,7 @@ export default function DonsAdminPage() {
 
           {/* Recent Donations */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-            <Card className="glass">
+            <Card className="">
               <CardHeader className="pb-3">
                 <CardTitle className="text-base flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-gold" />

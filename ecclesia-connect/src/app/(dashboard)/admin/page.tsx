@@ -84,7 +84,7 @@ export default function AdminDashboardPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
             >
-              <Card className="glass hover:shadow-md transition-all">
+              <Card className=" hover:shadow-md transition-all">
                 <CardContent className="p-3 sm:p-4">
                   <div className="flex items-center justify-between mb-2">
                     <div className={`p-1.5 rounded-lg ${stat.bg}`}>
@@ -117,7 +117,7 @@ export default function AdminDashboardPage() {
             transition={{ delay: 0.3 }}
             className="lg:col-span-2"
           >
-            <Card className="glass">
+            <Card className="">
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-base sm:text-lg flex items-center gap-2">
@@ -153,7 +153,7 @@ export default function AdminDashboardPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-base sm:text-lg flex items-center gap-2">
                     <AlertCircle className="w-4 h-4 text-gold" />
@@ -190,7 +190,7 @@ export default function AdminDashboardPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-base sm:text-lg">
                     Actions rapides

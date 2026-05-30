@@ -25,6 +25,9 @@
     "@radix-ui/react-switch": "^1.2.6",
     "@radix-ui/react-tabs": "^1.1.13",
     "@radix-ui/react-tooltip": "^1.2.8",
+    "@tsparticles/engine": "^4.1.0",
+    "@tsparticles/react": "^4.1.0",
+    "@tsparticles/slim": "^4.1.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.40.0",
@@ -33,7 +36,8 @@
     "next": "16.2.6",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "tailwind-merge": "^3.6.0"
+    "tailwind-merge": "^3.6.0",
+    "tailwindcss-animated": "^2.1.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

@@ -217,7 +217,7 @@ export default function MediaAdminPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardContent className="p-3 sm:p-4">
                   <div className="flex items-center justify-between">
                     <div>
@@ -296,7 +296,7 @@ export default function MediaAdminPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.03 }}
               >
-                <Card className="glass overflow-hidden group cursor-pointer">
+                <Card className=" overflow-hidden group cursor-pointer">
                   <div className="aspect-[4/3] relative bg-gradient-to-br from-royal-blue/10 to-gold/10">
                     {item.src ? (
                       <img src={item.src} alt={item.title} className="w-full h-full object-cover" />
@@ -349,7 +349,7 @@ export default function MediaAdminPage() {
             ))}
           </div>
         ) : (
-          <Card className="glass">
+          <Card className="">
             <CardContent className="p-0 divide-y divide-border/50">
               {filteredMedia.map((item) => (
                 <div
@@ -391,7 +391,7 @@ export default function MediaAdminPage() {
         )}
 
         {filteredMedia.length === 0 && loaded && (
-          <Card className="glass">
+          <Card className="">
             <CardContent className="p-8 text-center">
               <Camera className="w-10 h-10 text-muted-foreground/30 mx-auto mb-3" />
               <p className="font-cathedral text-lg text-muted-foreground">

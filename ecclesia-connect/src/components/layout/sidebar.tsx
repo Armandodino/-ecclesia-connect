@@ -52,7 +52,7 @@ const navigation = [
 
 const sections = [
   { id: "principal", label: "Principal" },
-  { id: "vie-eglise", label: "Vie de l Église" },
+  { id: "vie-eglise", label: "Vie de l'Église" },
   { id: "spirituel", label: "Spirituel" },
   { id: "communaute", label: "Communauté" },
   { id: "admin", label: "Administration" },
@@ -132,7 +132,7 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
               {(collapsed || expandedSection === section.id) && (
                 <div className="space-y-0.5">
                   {section.items.map((item) => {
-                    const isActive = pathname === item.href
+                    const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
                     return (
                       <Link
                         key={item.href}

@@ -116,7 +116,7 @@ export default function EspaceSpirituelPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="glass hover:shadow-lg transition-all duration-300 cursor-pointer group">
+              <Card className=" hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <CardContent className="p-5 text-center">
                   <div className={`p-4 rounded-2xl ${tool.bgColor} w-fit mx-auto mb-3 group-hover:scale-110 transition-transform`}>
                     <tool.icon className={`w-8 h-8 ${tool.color}`} />
@@ -140,7 +140,7 @@ export default function EspaceSpirituelPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <Card className="glass">
+            <Card className="">
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-base sm:text-lg flex items-center gap-2">
@@ -191,7 +191,7 @@ export default function EspaceSpirituelPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <Card className="glass">
+            <Card className="">
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-base sm:text-lg flex items-center gap-2">

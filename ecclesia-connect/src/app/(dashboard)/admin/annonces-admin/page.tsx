@@ -57,7 +57,7 @@ export default function AnnoncesAdminPage() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          <Card className="glass">
+          <Card className="">
             <CardContent className="p-0 divide-y divide-border/50">
               {filtered.map((announcement) => (
                 <div key={announcement.id} className="p-4 hover:bg-muted/30 transition-colors">

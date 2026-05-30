@@ -148,7 +148,7 @@ export default function SacrementsPage() {
               transition={{ delay: index * 0.1 }}
             >
               <Card
-                className={`glass cursor-pointer transition-all duration-300 hover:shadow-lg ${
+                className={` cursor-pointer transition-all duration-300 hover:shadow-lg ${
                   selectedSacrament === sacrament.id
                     ? "ring-2 ring-gold cathedral-glow"
                     : ""
@@ -177,7 +177,7 @@ export default function SacrementsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <Card className="glass">
+            <Card className="">
               <CardHeader>
                 <CardTitle className="text-base sm:text-lg">
                   Documents requis -{" "}
@@ -245,7 +245,7 @@ export default function SacrementsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          <Card className="glass">
+          <Card className="">
             <CardHeader>
               <CardTitle className="text-base sm:text-lg">Mes demandes</CardTitle>
             </CardHeader>

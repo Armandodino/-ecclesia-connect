@@ -126,7 +126,7 @@ export default function TimelinePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardContent className="p-4 text-center">
                   <stat.icon className="w-6 h-6 text-gold mx-auto mb-2" />
                   <p className="text-2xl font-bold font-cathedral">{stat.value}</p>
@@ -143,7 +143,7 @@ export default function TimelinePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          <Card className="glass">
+          <Card className="">
             <CardContent className="p-6">
               <div className="relative">
                 {/* Vertical line */}

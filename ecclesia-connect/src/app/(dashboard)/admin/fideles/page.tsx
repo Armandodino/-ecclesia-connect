@@ -111,7 +111,7 @@ export default function FidelesPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <Card className="glass">
+          <Card className="">
             <CardContent className="p-0">
               {/* Table Header - Desktop */}
               <div className="hidden lg:grid lg:grid-cols-12 gap-4 p-4 border-b border-border font-medium text-xs text-muted-foreground uppercase tracking-wider">
@@ -253,7 +253,7 @@ export default function FidelesPage() {
                     <p className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {selectedMember.joined}</p>
                   </div>
                   <div className="p-3 rounded-lg bg-muted/30">
-                    <p className="text-xs text-muted-foreground mb-1">Sacremens</p>
+                    <p className="text-xs text-muted-foreground mb-1">Sacrements</p>
                     <div className="flex gap-1 mt-0.5">
                       {selectedMember.baptised && <Badge variant="gold" className="text-[9px]">Baptisé</Badge>}
                       {selectedMember.confirmed && <Badge variant="gold" className="text-[9px]">Confirmé</Badge>}

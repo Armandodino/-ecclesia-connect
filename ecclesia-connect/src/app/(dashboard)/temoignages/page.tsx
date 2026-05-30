@@ -116,7 +116,7 @@ export default function TemoignagesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 + index * 0.1 }}
             >
-              <Card className="glass hover:shadow-lg transition-all duration-300 h-full">
+              <Card className=" hover:shadow-lg transition-all duration-300 h-full">
                 <CardContent className="p-5 flex flex-col h-full">
                   <div className="flex items-center gap-3 mb-4">
                     <Avatar className="h-10 w-10">

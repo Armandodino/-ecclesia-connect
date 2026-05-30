@@ -42,7 +42,7 @@ export default function EvenementsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {events.map((event, index) => (
             <motion.div key={event.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }}>
-              <Card className="glass hover:shadow-md transition-all">
+              <Card className=" hover:shadow-md transition-all">
                 <CardContent className="p-4 sm:p-5">
                   <div className="flex items-start justify-between mb-3">
                     <div>

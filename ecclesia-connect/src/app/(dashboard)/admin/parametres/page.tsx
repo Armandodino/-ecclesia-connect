@@ -55,7 +55,7 @@ export default function ParametresPage() {
           </TabsList>
 
           <TabsContent value="parish" className="space-y-4">
-            <Card className="glass">
+            <Card className="">
               <CardHeader>
                 <CardTitle className="text-base flex items-center gap-2">
                   <Church className="w-4 h-4 text-gold" />
@@ -100,7 +100,7 @@ export default function ParametresPage() {
           </TabsContent>
 
           <TabsContent value="notifications" className="space-y-4">
-            <Card className="glass">
+            <Card className="">
               <CardHeader>
                 <CardTitle className="text-base">Préférences de notification</CardTitle>
               </CardHeader>
@@ -128,7 +128,7 @@ export default function ParametresPage() {
           </TabsContent>
 
           <TabsContent value="roles" className="space-y-4">
-            <Card className="glass">
+            <Card className="">
               <CardHeader>
                 <CardTitle className="text-base flex items-center gap-2">
                   <Shield className="w-4 h-4 text-gold" />

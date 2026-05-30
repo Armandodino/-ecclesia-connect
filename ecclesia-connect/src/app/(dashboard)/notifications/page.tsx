@@ -175,7 +175,7 @@ export default function NotificationsPage() {
                   transition={{ delay: index * 0.05 }}
                 >
                   <Card
-                    className={`glass transition-all duration-200 cursor-pointer ${
+                    className={` transition-all duration-200 cursor-pointer ${
                       !notification.read
                         ? "border-l-4 border-gold bg-gold/5"
                         : ""
@@ -221,7 +221,7 @@ export default function NotificationsPage() {
           </TabsContent>
 
           <TabsContent value="settings" className="space-y-4">
-            <Card className="glass">
+            <Card className="">
               <CardHeader>
                 <CardTitle className="text-base sm:text-lg">Préférences de notification</CardTitle>
               </CardHeader>

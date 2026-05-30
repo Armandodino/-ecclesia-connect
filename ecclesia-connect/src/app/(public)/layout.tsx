@@ -30,7 +30,7 @@ export default function PublicLayout({
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-royal-blue flex items-center justify-center cathedral-glow">
-              <Cross className="w-4.5 h-4.5 text-gold" />
+              <Cross className="w-5 h-5 text-gold" />
             </div>
             <div className="hidden sm:block">
               <span className="font-cathedral text-lg font-bold text-foreground leading-tight block">

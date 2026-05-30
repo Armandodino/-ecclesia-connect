@@ -182,7 +182,7 @@ export function Dashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <Card className="glass hover:shadow-lg transition-all duration-300 group">
+            <Card className=" hover:shadow-lg transition-all duration-300 group">
               <CardContent className="p-3 sm:p-5">
                 <div className="flex items-start justify-between">
                   <div>
@@ -219,7 +219,7 @@ export function Dashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <Card className="glass cathedral-glow">
+            <Card className=" cathedral-glow">
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-xl bg-gold/10">
@@ -247,7 +247,7 @@ export function Dashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <Card className="glass">
+            <Card className="">
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -313,7 +313,7 @@ export function Dashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <Card className="glass">
+            <Card className="">
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -368,7 +368,7 @@ export function Dashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <Card className="glass overflow-hidden">
+            <Card className=" overflow-hidden">
               <div className="stained-glass p-6 text-white text-center">
                 <Star className="w-8 h-8 text-gold mx-auto mb-3" />
                 <h3 className="font-cathedral text-lg font-semibold">
@@ -397,7 +397,7 @@ export function Dashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <Card className="glass">
+            <Card className="">
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-xl bg-deep-purple/10">
@@ -440,7 +440,7 @@ export function Dashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <Card className="glass cathedral-glow">
+            <Card className=" cathedral-glow">
               <CardContent className="p-5">
                 <div className="text-center">
                   <Cross className="w-6 h-6 text-gold mx-auto mb-3" />
@@ -463,7 +463,7 @@ export function Dashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <Card className="glass">
+            <Card className="">
               <CardContent className="p-5">
                 <div className="flex items-center justify-between">
                   <div>
@@ -502,7 +502,7 @@ export function Dashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
           >
-            <Card className="glass">
+            <Card className="">
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-xl bg-emerald/10">

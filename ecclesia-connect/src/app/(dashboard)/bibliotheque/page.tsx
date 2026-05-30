@@ -61,7 +61,7 @@ const books = [
   {
     id: 4,
     title: "Evangelii Gaudium",
-    subtitle: "L'joie de l'Évangile",
+    subtitle: "La joie de l'Évangile",
     category: "encycliques",
     chapters: 288,
     progress: 45,
@@ -145,7 +145,7 @@ export default function BibliothequePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
             >
-              <Card className="glass hover:shadow-lg transition-all duration-300 cursor-pointer group">
+              <Card className=" hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <CardContent className="p-4 text-center">
                   <category.icon className="w-6 h-6 text-royal-blue mx-auto mb-2 group-hover:text-gold transition-colors" />
                   <p className="text-sm font-medium">{category.label}</p>
@@ -172,7 +172,7 @@ export default function BibliothequePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.08 }}
                 >
-                  <Card className="glass hover:shadow-lg transition-all duration-300 cursor-pointer group">
+                  <Card className=" hover:shadow-lg transition-all duration-300 cursor-pointer group">
                     <CardContent className="p-5">
                       <div className="flex items-start justify-between mb-3">
                         <div className="p-3 rounded-xl bg-royal-blue/10">
@@ -222,7 +222,7 @@ export default function BibliothequePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
                 >
-                  <Card className="glass hover:shadow-lg transition-all duration-300 cursor-pointer">
+                  <Card className=" hover:shadow-lg transition-all duration-300 cursor-pointer">
                     <CardContent className="p-4 flex items-center gap-4">
                       <div className="p-2 rounded-xl bg-wine-red/10">
                         <Heart className="w-5 h-5 text-wine-red" />
@@ -242,7 +242,7 @@ export default function BibliothequePage() {
           </TabsContent>
 
           <TabsContent value="favorites" className="space-y-4">
-            <Card className="glass">
+            <Card className="">
               <CardContent className="p-8 text-center">
                 <Bookmark className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
                 <h3 className="font-cathedral font-semibold mb-2">

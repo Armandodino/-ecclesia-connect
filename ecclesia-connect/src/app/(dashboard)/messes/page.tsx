@@ -90,7 +90,7 @@ export default function MessesPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
         >
-          <Card className="glass overflow-hidden cathedral-glow">
+            <Card className=" overflow-hidden cathedral-glow">
             <div className="stained-glass p-6 text-white">
               <div className="flex items-center gap-3">
                 <div className="relative">
@@ -138,7 +138,7 @@ export default function MessesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Card className="glass">
+            <Card className="">
               <CardHeader>
                 <CardTitle className="text-base sm:text-lg flex items-center gap-2">
                   <Calendar className="w-5 h-5 text-royal-blue" />
@@ -188,7 +188,7 @@ export default function MessesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <Card className="glass">
+            <Card className="">
               <CardHeader>
                 <CardTitle className="text-base sm:text-lg flex items-center gap-2">
                   <Heart className="w-5 h-5 text-wine-red" />

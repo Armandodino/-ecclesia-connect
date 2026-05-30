@@ -93,7 +93,7 @@ export default function IaPage() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 sm:gap-6">
           {/* Chat Area */}
           <div className="lg:col-span-3">
-            <Card className="glass h-[50vh] sm:h-[600px] flex flex-col">
+            <Card className=" h-[50vh] sm:h-[600px] flex flex-col">
               {/* Messages */}
               <div className="flex-1 overflow-y-auto p-4 space-y-4">
                 {messages.map((msg, index) => (
@@ -161,7 +161,7 @@ export default function IaPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardHeader>
                   <CardTitle className="text-base sm:text-lg flex items-center gap-2">
                     <Lightbulb className="w-5 h-5 text-gold" />
@@ -190,7 +190,7 @@ export default function IaPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardHeader>
                   <CardTitle className="text-base sm:text-lg flex items-center gap-2">
                     <Sparkles className="w-5 h-5 text-gold" />

@@ -95,13 +95,13 @@ const features = [
     icon: Calendar,
     title: "Calendrier",
     description: "Suivez le calendrier liturgique",
-    href: "/annonces-publiques",
+    href: "/calendrier",
   },
   {
     icon: Church,
     title: "Messes",
     description: "Horaires et intentions de messe",
-    href: "/annonces-publiques",
+    href: "/messes",
   },
   {
     icon: Heart,
@@ -126,7 +126,7 @@ export default function PublicPage() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-royal-blue flex items-center justify-center cathedral-glow">
-              <Cross className="w-4.5 h-4.5 text-gold" />
+                    <Cross className="w-5 h-5 text-gold" />
             </div>
             <div className="hidden sm:block">
               <span className="font-cathedral text-lg font-bold text-foreground leading-tight block">
@@ -293,7 +293,7 @@ export default function PublicPage() {
                 transition={{ delay: index * 0.1 }}
               >
                 <Link href={feature.href}>
-                  <Card className="glass hover:shadow-lg transition-all duration-300 cursor-pointer group h-full">
+                    <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer group h-full">
                     <CardContent className="p-4 sm:p-5 text-center">
                       <div className="p-2.5 sm:p-3 rounded-xl bg-royal-blue/10 w-fit mx-auto mb-3 group-hover:scale-110 transition-transform">
                         <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 text-royal-blue" />
@@ -408,7 +408,7 @@ export default function PublicPage() {
               viewport={{ once: true }}
               className="mt-8"
             >
-              <Card className="glass border-dashed border-2 border-border hover:border-gold/50 transition-colors">
+              <Card className="border-dashed border-2 border-border hover:border-gold/50 transition-colors">
                 <CardContent className="p-8 text-center">
                   <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
                     <Sparkles className="w-6 h-6 text-gold" />
@@ -440,7 +440,7 @@ export default function PublicPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <Card className="glass">
+            <Card className="">
               <CardContent className="p-5 sm:p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 rounded-xl bg-royal-blue/10">
@@ -481,7 +481,7 @@ export default function PublicPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <Card className="glass">
+            <Card className="">
               <CardContent className="p-5 sm:p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 rounded-xl bg-gold/10">

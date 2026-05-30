@@ -46,7 +46,7 @@ export default function SacrementsAdminPage() {
             const StatusIcon = status.icon
             return (
               <motion.div key={request.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }}>
-                <Card className="glass hover:shadow-md transition-all">
+                <Card className=" hover:shadow-md transition-all">
                   <CardContent className="p-4">
                     <div className="flex items-center gap-4">
                       <div className={`p-2 rounded-xl ${status.color} flex-shrink-0`}>

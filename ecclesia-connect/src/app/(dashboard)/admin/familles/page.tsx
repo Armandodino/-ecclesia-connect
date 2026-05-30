@@ -53,7 +53,7 @@ export default function FamillesPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           {filtered.map((family, index) => (
             <motion.div key={family.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }}>
-              <Card className="glass hover:shadow-md transition-all cursor-pointer group">
+              <Card className=" hover:shadow-md transition-all cursor-pointer group">
                 <CardContent className="p-4 sm:p-5">
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center gap-3">

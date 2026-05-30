@@ -150,7 +150,7 @@ export default function MouvementsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.08 }}
             >
-              <Card className="glass hover:shadow-lg transition-all duration-300 h-full">
+              <Card className=" hover:shadow-lg transition-all duration-300 h-full">
                 <CardContent className="p-5 flex flex-col h-full">
                   <div className="flex items-start justify-between mb-4">
                     <div className={`p-3 rounded-xl ${movement.bgColor}`}>

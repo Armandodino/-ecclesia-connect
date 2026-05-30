@@ -43,7 +43,7 @@ const massSchedule = [
   { day: "Mercredi", times: ["06h30", "18h00"], type: "messe" },
   { day: "Jeudi", times: ["06h30", "18h00"], type: "messe" },
   { day: "Vendredi", times: ["06h30", "18h00"], type: "messe" },
-  { day: "Samedi", times: ["06h30", "18h00"], type: "vepres" },
+  { day: "Samedi", times: ["06h30", "17h30 (Vêpres)"], type: "vepres" },
 ]
 
 const intentions = [
@@ -110,7 +110,7 @@ export default function CalendrierPage() {
             transition={{ delay: 0.1 }}
             className="lg:col-span-2"
           >
-            <Card className="glass">
+            <Card className="">
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <Button variant="ghost" size="icon">
@@ -231,7 +231,7 @@ export default function CalendrierPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardHeader>
                   <CardTitle className="text-base sm:text-lg flex items-center gap-2">
                     <Church className="w-5 h-5 text-royal-blue" />
@@ -266,7 +266,7 @@ export default function CalendrierPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardHeader>
                   <CardTitle className="text-base sm:text-lg flex items-center gap-2">
                     <Clock className="w-5 h-5 text-gold" />

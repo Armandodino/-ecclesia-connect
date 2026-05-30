@@ -129,7 +129,7 @@ export default function DonsPage() {
             transition={{ delay: 0.1 }}
             className="lg:col-span-2"
           >
-            <Card className="glass">
+            <Card className="">
               <CardHeader>
                 <CardTitle className="text-base sm:text-lg flex items-center gap-2">
                   <Wallet className="w-5 h-5 text-gold" />
@@ -225,7 +225,7 @@ export default function DonsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardContent className="p-5">
                   <div className="text-center">
                     <p className="text-sm text-muted-foreground">Total des dons</p>
@@ -249,7 +249,7 @@ export default function DonsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardHeader>
                   <CardTitle className="text-base sm:text-lg">Derniers dons</CardTitle>
                 </CardHeader>
@@ -296,7 +296,7 @@ export default function DonsPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 + index * 0.1 }}
               >
-                <Card className="glass hover:shadow-lg transition-all duration-300">
+                <Card className=" hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-5">
                     <h3 className="font-cathedral font-semibold mb-2">
                       {campaign.title}

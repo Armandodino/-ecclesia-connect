@@ -74,7 +74,7 @@ export default function CarteSpirituellePage() {
             transition={{ delay: 0.1 }}
             className="lg:col-span-2"
           >
-            <Card className="glass overflow-hidden">
+            <Card className=" overflow-hidden">
               <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] bg-gradient-to-br from-royal-blue/5 to-gold/5">
                 {/* Simulated map */}
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -150,7 +150,7 @@ export default function CarteSpirituellePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardHeader>
                   <CardTitle className="text-base sm:text-lg">Secteurs pastoraux</CardTitle>
                 </CardHeader>
@@ -184,7 +184,7 @@ export default function CarteSpirituellePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardHeader>
                   <CardTitle className="text-base sm:text-lg">Groupes</CardTitle>
                 </CardHeader>
@@ -217,7 +217,7 @@ export default function CarteSpirituellePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardContent className="p-5">
                   <div className="text-center">
                     <p className="text-3xl font-bold font-cathedral text-gold">

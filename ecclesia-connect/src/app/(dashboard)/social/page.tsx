@@ -109,7 +109,7 @@ export default function SocialPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardContent className="p-4">
                   <div className="flex items-start gap-3">
                     <Avatar className="h-10 w-10">
@@ -155,7 +155,7 @@ export default function SocialPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 + index * 0.1 }}
               >
-                <Card className="glass">
+                <Card className="">
                   <CardContent className="p-5">
                     <div className="flex items-start gap-3">
                       <Avatar className="h-10 w-10">
@@ -221,7 +221,7 @@ export default function SocialPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardHeader>
                   <CardTitle className="text-base sm:text-lg">En ligne</CardTitle>
                 </CardHeader>
@@ -260,7 +260,7 @@ export default function SocialPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <Card className="glass">
+              <Card className="">
                 <CardHeader>
                   <CardTitle className="text-base sm:text-lg">Actions rapides</CardTitle>
                 </CardHeader>
